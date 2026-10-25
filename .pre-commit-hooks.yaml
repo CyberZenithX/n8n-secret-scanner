@@ -1,0 +1,7 @@
+- id: n8n-secret-scanner
+  name: n8n-secret-scanner
+  description: Scan n8n workflow exports for exposed secrets and risky config
+  entry: n8n-secret-scanner scan
+  language: python
+  types: [json]
+  files: '(workflow|n8n).*\\.json$'

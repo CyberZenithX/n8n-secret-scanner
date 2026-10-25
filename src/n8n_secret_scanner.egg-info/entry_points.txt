@@ -1,0 +1,2 @@
+[console_scripts]
+n8n-secret-scanner = n8n_secret_scanner.cli:app

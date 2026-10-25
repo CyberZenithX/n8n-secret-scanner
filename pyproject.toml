@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "n8n-secret-scanner"
+version = "0.1.0"
+description = "Scan exported n8n workflows for secrets, PII, and risky configuration"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "CyberZenithX" }]
+dependencies = [
+  "typer>=0.12.3",
+  "rich>=13.7.1",
+]
+
+[project.scripts]
+n8n-secret-scanner = "n8n_secret_scanner.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

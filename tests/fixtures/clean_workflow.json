@@ -1,0 +1,25 @@
+{
+  "name": "Clean Workflow",
+  "nodes": [
+    {
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "12",
+          "name": "prod-api"
+        }
+      },
+      "parameters": {
+        "url": "={{ $json.endpoint }}",
+        "headers": {
+          "Authorization": "={{ $env.API_HEADER }}"
+        },
+        "requestId": "550e8400-e29b-41d4-a716-446655440000"
+      }
+    }
+  ],
+  "settings": {
+    "timezone": "Asia/Dubai"
+  }
+}

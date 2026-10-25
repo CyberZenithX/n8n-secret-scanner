@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Workflow One",
+    "nodes": [
+      {
+        "name": "Set",
+        "type": "n8n-nodes-base.set",
+        "parameters": {
+          "token": "ghl_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Workflow Two",
+    "nodes": [
+      {
+        "name": "Set",
+        "type": "n8n-nodes-base.set",
+        "parameters": {
+          "notes": "no findings"
+        }
+      }
+    ]
+  }
+]
